@@ -6,8 +6,11 @@ function startTime() {
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
-    var month = checkTime(month);
-    var year = lowerHour(year);
+
+    day = checkTime(day);
+    month = checkTime(month);
+    year = lowerYear(year);
+    
     h = checkTime(h);
     m = checkTime(m);
     s = checkTime(s);
@@ -20,10 +23,12 @@ function startTime() {
     sessionStorage.clear();
 }
 function checkTime(i) {
-    if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+    if (i < 10){ 
+        i = "0" + i; 
+    }  // add zero in front of numbers < 10
     return i;
 }
-function lowerHour(i){
+function lowerYear(i){
     {i = (i-2000)};
     return i
 }

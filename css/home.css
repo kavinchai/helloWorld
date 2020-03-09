@@ -1,20 +1,35 @@
-header {
-    text-align: right;
-    top: 0;
+.welcome{
+    text-align: center;
+    font-size: 120%;
 }
+
+.columns{
+    text-align: center;
+}
+
+#panel1, #panel2, #panel3 {
+    display: inline-block;
+    padding: 0px 80px;
+    line-height:200%
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#tbody1_1:hover, #tbody1_2:hover,
+#tbody1_3:hover, #tbody2_1:hover,
+#tbody2_2:hover, #tbody2_3:hover,
+#tbody3_1:hover, #tbody3_2:hover,
+#tbody3_3:hover{
+    transform: scale(1.33);
+}
+
 footer{
     position: fixed;
     left: 50%;
     bottom: 0;
-}
-
-th,
-td {
-    padding: 10px;
-}
-
-table {
-    width: 40%;
 }
 
 /* unvisited link */
@@ -28,25 +43,15 @@ a:visited {
     color: white;
     text-decoration: none;
 }
+
 a:hover{
     color: rgb(105, 105, 105);
 }
+
 .o-hide{
     opacity: 0;
-    transition: all ease 0.05s;
+    transition: all ease 5s;
 }
 .o-hide:hover{
     opacity: 1;
 }
-
-/* tBody Start*/
-.tbody1:hover{transform: scale(1.5)}
-.tbody2:hover{transform: scale(1.5)}
-.tbody3:hover{transform: scale(1.5)}
-.tbody4:hover{transform: scale(1.5)}
-.tbody5:hover{transform: scale(1.5)}
-.tbody6:hover{transform: scale(1.5)}
-.tbody7:hover{transform: scale(1.5)}
-.tbody8:hover{transform: scale(1.5)}
-.tbody9:hover{transform: scale(1.5)}
-/* tBody End */
