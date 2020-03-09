@@ -13,4 +13,4 @@ a startpage called "hello world"
 9. paste the address of the file (include .html at the end of the home_page file)
 
 ### preview
-![preview](https://i.imgur.com/zt3XMCH.jpg)
+![preview](https://i.imgur.com/OrIOVe9.jpg)
