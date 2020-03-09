@@ -6,6 +6,7 @@ function startTime() {
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
+    
 
     day = checkTime(day);
     month = checkTime(month);
@@ -14,13 +15,11 @@ function startTime() {
     h = checkTime(h);
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('display_date').innerHTML =
-        day + '/' + month + '/' + year;
-    document.getElementById('display_time').innerHTML =
-        h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
+    document.getElementById('display_date').innerHTML = day + '/' + month + '/' + year;
+    document.getElementById('display_time').innerHTML = h + ":" + m + ":" + s;
 
     sessionStorage.clear();
+    setTimeout(startTime, 500);
 }
 function checkTime(i) {
     if (i < 10){ 
@@ -28,7 +27,10 @@ function checkTime(i) {
     }  // add zero in front of numbers < 10
     return i;
 }
+
 function lowerYear(i){
-    {i = (i-2000)};
-    return i
+    {
+        i = (i-2000);
+    }
+    return i;
 }
