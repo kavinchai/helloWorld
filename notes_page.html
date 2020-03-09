@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css\navigationBar.css">
+    <link rel="stylesheet" type="text/css" href="css\buttons.css">
+    <link rel="stylesheet" type="text/css" href="css\body.css">
+    <link rel="stylesheet" type="text/css" href="css\notes.css">
+    <link rel="shortcut icon" type="image/png" href="css\icons\cube.png">
+</head>
+
+<body onload="startTime()">
+    <div class="sidenav">
+        <a href="home_page.html"><i class="fa fa-home"></i> home</a>
+        <a class="active" href="notes_page.html"><i class="fa fa-tv"></i> notes</a>
+        <a href="music_page.html"><i class="fa fa-music"></i> music</a>
+    </div>
+    <div id="display_date" style="font-size: 150%;"></div>
+    <div id="display_time" style="font-size: 150%;"></div>
+    <p>things to do</p>
+
+    <!-- Table section start -->
+    <table class="elements" align="center">
+        <thead>
+            <tr style="font-size: 90%;">
+                <th style="color: rgb(55, 220, 91);">edit</th>
+                <th style="color: #37B0DC;">subject </th>
+                <th style="color: #DC3768;">notes </th>
+                <th style="color: #DCBB37;">delete</th>
+            </tr>
+        </thead>
+        <tbody style="font-size:75%;">
+        </tbody>
+    </table>
+    <!--Table section End  -->
+
+    <button class="open-button open-button-1 open-button-1f" onclick="openAddForm()">add notes</button>
+    <!-- Form Section Start-->
+    <div class="form-popup" id="formnotes">
+        <form class="form-container">
+            <input type="hidden" id="id" placeholder="id" >
+            <input type="text" id="subject" placeholder="subject" autocomplete="off">
+            <br>
+            <textarea rows="12" id="notes" cols="40" autocomplete="off" placeholder="type notes here..."></textarea>
+            <br>
+            <button class="close-button close-button-1 close-button-1f" type="reset" id="reset">reset</button>
+            <br>
+            <button type="button" class="close-button close-button-1 close-button-1f" id="submit">submit</button>
+            <br>
+            <button class="close-button close-button-1 close-button-1f" onclick="closeAddForm()">close</button>
+            <br>
+        </form>
+    </div>   
+    <!-- Form Section End-->
+</body>
+
+<script type="text/javascript" src="js\jquery.js"></script>
+<script type="text/javascript" src="js\toastr.js"></script>
+<script type="text/javascript" src="js\checkTime.js"></script>
+<script type="text/javascript" src="js\notes.js"></script>
+
+</html>

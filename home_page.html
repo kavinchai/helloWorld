@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hello world...</title>
+    <!-- https://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp START -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Icons END -->
+    <link rel="stylesheet" type="text/css" href="css\navigationBar.css">
+    <link rel="stylesheet" type="text/css" href="css\buttons.css">
+    <link rel="stylesheet" type="text/css" href="css\body.css">
+    <link rel="stylesheet" type="text/css" href="css\home.css">
+    <!-- https://www.flaticon.com/ START -->
+    <link rel="shortcut icon" type="image/png" href="css\icons\cube.png">
+    <!-- Flaticon END -->
+</head>
+
+<div class="sidenav">
+    <a class="active" href="home_page.html"><i class="fa fa-home"></i> home</a>
+    <a href="notes_page.html"><i class="fa fa-tv"></i> notes</a>
+    <a href="music_page.html"><i class="fa fa-music"></i> music</a>
+</div>
+
+<body onload="startTime()">
+    <div id="display_date" style="font-size: 150%;"></div>
+    <div id="display_time" style="font-size: 150%;"></div>
+    <p> hello world... </p>
+    <table align="center">
+        <thead>
+            <tr style="font-size: 90%;">
+                <th style="color: #37B0DC;"> work </th>
+                <th style="color: #DC3768;"> social </th>
+                <th style="color: #DCBB37;"> chill </th>
+            </tr>
+        </thead>
+        <tbody style = "font-size: 75%; color: white;">
+            <tr>
+                <th class="tbody1"><a target="_blank" href="https://canvas.vt.edu/">canvas</a></th>
+                <th class="tbody2"><a target="_blank" href="https://www.facebook.com/">facebook</a></th>
+                <th class="tbody3"><a target="_blank" href="https://www.youtube.com/feed/subscriptions">youtube</a></th>
+            </tr>
+            <tr>
+                <th class="tbody4"><a target="_blank" href="https://banweb.banner.vt.edu/ssb/prod/twbkwbis.P_WWWLogin">hokiespa</a></th>
+                <th class="tbody5"><a target="_blank" href="https://www.instagram.com/">instagram</a></th>
+                <th class="tbody6"><a target="_blank" href="https://www.netflix.com/">netflix</a></th>
+            </tr>
+            <tr>
+                <th class="tbody7"><a target="_blank" href="https://pharos.lib.vt.edu/myprintcenter/">print</a></th>
+                <th class="tbody8"><a target="_blank" href="https://www.messenger.com/">messenger</a></th>
+                <th class="tbody9"><a target="_blank" href="https://open.spotify.com/">spotify</a></th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<footer>
+    <div class="o-hide"><a href="pirate.swf">hello</a></div>
+</footer>
+
+<script type="text/javascript" src="js\jquery.js"></script>
+<script type="text/javascript" src="js\checkTime.js"></script>
+<script type="text/javascript" src="js\toastr.js"></script>
+
+</html>
