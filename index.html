@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>hello world...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
     <!-- https://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp START -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Icons END -->
-    <link rel="stylesheet" type="text/css" href="css\buttons.css">
-    <link rel="stylesheet" type="text/css" href="css\home.css">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
 
 </head>
 
@@ -50,6 +51,41 @@
 
     </div>
 
+    <div class = "todo_section">
+        <div id = "todo_list">
+            <p>things to do</p>
+            <table id="elements">
+                <thead>
+                    <tr style="font-size: 90%;">
+                        <th style="color: rgb(55, 220, 91);">edit</th>
+                        <th style="color: #37B0DC;">subject </th>
+                        <th style="color: #DC3768;">notes </th>
+                        <th style="color: #DCBB37;">delete</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size:75%;">
+                </tbody>
+            </table>
+            <button class="open-button open-button-1 open-button-1f" onclick="openAddForm()">add notes</button>
+        </div>
+
+        <div class="form-popup" id="formnotes">
+            <form class="form-container">
+                <input type="hidden" id="id" placeholder="id" >
+                <input type="text" id="subject" placeholder="subject" autocomplete="off">
+                <br>
+                <textarea rows="12" id="notes" cols="40" autocomplete="off" placeholder="type notes here..."></textarea>
+                <br>
+                <button class="close-button close-button-1 close-button-1f" type="reset" id="reset">reset</button>
+                <br>
+                <button type="button" class="close-button close-button-1 close-button-1f" id="submit">submit</button>
+                <br>
+                <button class="close-button close-button-1 close-button-1f" onclick="closeAddForm()">close</button>
+                <br>
+            </form>
+        </div>  
+
+    </div>
 
 
 </body>
@@ -57,5 +93,6 @@
 <script type="text/javascript" src="js\jquery.js"></script>
 <script type="text/javascript" src="js\checkTime.js"></script>
 <script type="text/javascript" src="js\toastr.js"></script>
+<script type="text/javascript" src="js\notes.js"></script>
 
 </html>

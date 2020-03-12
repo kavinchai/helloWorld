@@ -1,0 +1,245 @@
+/* oxygen-mono-regular - latin */
+@font-face {
+    font-family:'Oxygen Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oxygen Mono'), local('OxygenMono-Regular'),
+         url('fonts/oxygen mono/oxygen-mono-v7-latin-regular.woff2') format('woff2'),
+         url('fonts/oxygen mono/oxygen-mono-v7-latin-regular.woff') format('woff'); 
+}
+  
+body {
+    font-family: 'Oxygen Mono';
+    background-color: #282626;
+    color: white;
+    margin-top: 100px;
+}
+
+.welcome{
+    text-align: center;
+    font-size: 120%;
+}
+
+.columns{
+    text-align: center;
+}
+
+#panel1, #panel2, #panel3 {
+    display: inline-block;
+    padding: 0px 40px;
+    line-height:200%;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#tbody1_1:hover, #tbody1_2:hover,
+#tbody1_3:hover, #tbody2_1:hover,
+#tbody2_2:hover, #tbody2_3:hover,
+#tbody3_1:hover, #tbody3_2:hover,
+#tbody3_3:hover{
+    transform: scale(1.33);
+}
+
+footer{
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(105, 105, 105);
+}
+
+.o-hide{
+    opacity: 0;
+    transition: all ease 5s;
+}
+.o-hide:hover{
+    opacity: 1;
+}
+
+
+/* CSS for Notes Section START */
+#todo_list{
+    text-align: center;
+}
+
+#formnotes{
+    text-align: center;
+}
+
+#elements{
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th{
+    height: 2px;
+    width: 90px;
+}
+
+::placeholder{
+    opacity: 1;
+    font-family: "Oxygen Mono";
+}
+
+input[type=text], select, textarea{
+    width: 300px;
+    padding: 8px;
+    margin: 6px;
+    box-sizing: border-box;
+    border: none;
+    background-color: white;
+    text-align: left;
+    font-family: "Oxygen Mono";
+}
+
+input[type=text]:hover,textarea:hover{
+    background-color: rgb(165, 165, 165);
+}
+
+button[class="editRow"], button[class="deleteRow"] {
+    background-color: #282626;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Oxygen Mono";
+    padding: 8px;
+}
+
+button[class="editRow"]:hover,
+button[class="deleteRow"]:hover {
+    background-color: #3b3a3a;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+}
+
+/* CSS for Notes Section END */
+
+
+/* General button style (open notes) Start */
+.open-button {
+    border: none;
+    font-family: "Oxygen Mono";
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    height: 30px;
+    width: 300px;
+    margin: 15px 15px;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.close-button {
+    border: none;
+    font-family: "Oxygen Mono";
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    height: 30px;
+    width: 300px;
+    display: inline-block;
+    margin: 4px 4px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.open-button:after,
+.close-button:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.open-button:before,
+.close-button:before {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Button 1 */
+.open-button-1,
+.close-button-1 {
+    border: 3px solid #fff;
+    color: #fff;
+}
+.open-button-1f,
+.close-button-1f {
+    overflow: hidden;
+}
+
+.open-button-1f:after,
+.close-button-1f:after {
+    width: 101%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.open-button-1f:hover,
+.open-button-1f:active,
+.close-button-1f:hover,
+.close-button-1f:active {
+    color: #201f1f;
+}
+
+.open-button-1f:hover:after,
+.close-button-1f:hover:after {
+    height: 75%;
+    opacity: 1;
+}
+
+.open-button-1f:active:after,
+.close-button-1f:active:after {
+    height: 130%;
+    opacity: 1;
+}
+/* General button style (open notes) End */
