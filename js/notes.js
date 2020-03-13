@@ -5,8 +5,8 @@ $(document).ready(function () {
         "debug": false,
         "newestOnTop": false,
         "progressBar": true,
-        "positionClass": "toast-top-right",
-        "preventDuplicates": false,
+        "positionClass": "toast-top-left",
+        "preventDuplicates": true,
         "onclick": null,
         "showDuration": "200",
         "hideDuration": "1000",
@@ -20,10 +20,6 @@ $(document).ready(function () {
 
     // Array Initialization
     var data = [];
-    // data = JSON.parse(localStorage.getItem("taskObject"));
-    // if (data == undefined) {
-    //     data = [];
-    // }
 
     // Loading data from local storage to Page
     function loadData() {
@@ -45,11 +41,11 @@ $(document).ready(function () {
             var id = this.id;
             var retrievedObject = JSON.parse(localStorage.getItem("taskObject"));
             retrievedObject.splice(id, 1);
-            //$("#row-" + id).remove();
             localStorage.setItem("taskObject", JSON.stringify(retrievedObject));
             toastr["success"]("Record has been deleted", "Success!");
             loadData();
         });
+        
         // Open the Form in Edit mode
         $(".editRow").click(function () {
             $('#elements').hide();
@@ -64,7 +60,7 @@ $(document).ready(function () {
                 for (let index = 0; index < data.length; index++) {
                     const element = data[index];
                     if (parseInt(id) == index) {
-                        $("#id").val(index);
+                        $("#text_id").val(index);
                         $("#subject").val(element.subject);
                         $("#notes").val(element.notes);
                     }
@@ -99,7 +95,7 @@ $(document).ready(function () {
         if (data == undefined) {
             data = [];
         }
-        var id = $("#id").val();
+        var id = $("#text_id").val();
         if (id != "") {
             for (let index = 0; index < data.length; index++) {
                 const element = data[index];
@@ -126,7 +122,7 @@ $(document).ready(function () {
 
     // Clear the form controls value
     function clear() {
-        $("#id").val("");
+        $("#text_id").val("");
         $("#subject").val("");
         $("#notes").val("");
     }
@@ -153,7 +149,7 @@ function openAddForm() {
     $('#elements').hide();
     $('.open-button').hide();
     $('#formnotes').show();
-    $("#id").val("");
+    $("#text_id").val("");
     $("#subject").val("");
     $("#notes").val("");
 }
